@@ -38,13 +38,12 @@ int main(){
 
     printf("Divisao:\n");
     if(num1>num2){
-        subtracao = num1 - num2;
-        printf("%i - %i = %i\n", num1, num2, subtracao);
+        divisao = num1 / num2;
+        printf("%i / %i = %i\n", num1, num2, divisao);
     }else{
-        subtracao = num2 - num1;
-        printf("%i - %i = %i\n", num2, num1, subtracao);
+        divisao = num2 / num1;
+        printf("%i / %i = %i\n", num2, num1, divisao);
     }
-    printf("%i / %i = %i\n", num1, num2, divisao);
 
 
     return 0;
