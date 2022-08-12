@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 
-void validarNota(float nota){
+bool isValid(float nota){
 
     if(nota>10){
         printf("Nova invalida! Insira um valor entre 0 e 10 (inclusives)!\n");
@@ -22,11 +22,15 @@ int main(){
     printf("Informe as notas de cada bimestre:\n");
 
     for(int i=0;i<bimestres;i++){
-        while()
+        // while()
         printf("%i: ", i+1);
         scanf("%f", &notas[i]);
 
-        validarNota(notas[i]);
+        if(isValid(notas[i])){
+            printf("is valid");
+        } else {
+            printf("isnt valid");
+        }
 
         media += notas[i];
     }
@@ -38,5 +42,3 @@ int main(){
 
     return 0;
 }
-
-
