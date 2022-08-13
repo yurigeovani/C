@@ -4,14 +4,10 @@
 
 
 bool isValid(float nota){
-
-    if(nota>10){
-        printf("Nova invalida! Insira um valor entre 0 e 10 (inclusives)!\n");
-        return false;
+    if(nota>=0 && nota<=10){
+        return true;
     }
-    return true;
 }
-
 
 int main(){
 
@@ -22,23 +18,21 @@ int main(){
     printf("Informe as notas de cada bimestre:\n");
 
     for(int i=0;i<bimestres;i++){
-        // while()
-        printf("%i: ", i+1);
-        scanf("%f", &notas[i]);
+        float nota;
 
-        if(isValid(notas[i])){
-            printf("is valid");
-        } else {
-            printf("isnt valid");
+        printf("%i: ", i+1);
+        scanf("%f", &nota);
+        
+        while(!isValid(nota)){
+            printf("Nota invalida! Digite uma nota entre 0 e 10 (inclusives)!\n");
+            printf("%i: ", i+1);
+            scanf("%f", &nota);
         }
 
-        media += notas[i];
+        notas[i] = nota;
+        media += nota;
     }
 
-        printf("\nResultado: %f", (media/bimestres));
-//    scanf("%f", &num1);
-
-//    printf("\nO valor da soma eh %.2f.", validarNota(num1));
-
+        printf("\nResultado: %.2f\n", (media/bimestres));
     return 0;
 }

@@ -1,0 +1,1 @@
+nota>10 ? valid=0 : valid=1;
