@@ -4,24 +4,24 @@
 int main(){
 
     /*
-        == comparação
-        != diferença
+        == comparaï¿½ï¿½o
+        != diferenï¿½a
     */
 
     int i = 10;
 //
-//    printf("%i\n", i==1); //Comparação se i é igual a 1
-//    printf("%i\n", i!=1); // Comparação se i é diferente de 1
+//    printf("%i\n", i==1); //Comparaï¿½ï¿½o se i ï¿½ igual a 1
+//    printf("%i\n", i!=1); // Comparaï¿½ï¿½o se i ï¿½ diferente de 1
 //
-//    printf("%i\n", !(i==1)); // Compara a negação do valor a 1.
+//    printf("%i\n", !(i==1)); // Compara a negaï¿½ï¿½o do valor a 1.
 
-    printf("Digite um número != de 5: \n");
+    printf("Digite um numero != de 5: \n");
     scanf("%i", &i);
 
     if(i!=5){
-        printf("TRUE");
+        printf("TRUE\n");
     } else {
-        printf("FALSE");
+        printf("FALSE\n");
     }
 
     return 0;
