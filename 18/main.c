@@ -33,7 +33,7 @@ int main()
     float notas[bimestres], media;
 
     printf("########## MEDIA ESCOLAR ##########\n");
-    printf("Informe as notas de cada bimestre:\n");
+    printf("Informe a nota de cada bimestre:\n");
 
     for (int i = 0; i < bimestres; i++)
     {
