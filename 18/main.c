@@ -2,14 +2,32 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
-bool isValid(float nota){
-    if(nota>=0 && nota<=10){
+bool isValid(float nota)
+{
+    if (nota >= 0 && nota <= 10)
+    {
         return true;
     }
 }
 
-int main(){
+void approved(float media)
+{
+    if (media < 4)
+    {
+        printf("Disapproved!");
+    }
+    else if (media < 6)
+    {
+        printf("Recovery!");
+    }
+    else
+    {
+        printf("Approved!");
+    }
+}
+
+int main()
+{
 
     int bimestres = 4;
     float notas[bimestres], media;
@@ -17,15 +35,17 @@ int main(){
     printf("########## MEDIA ESCOLAR ##########\n");
     printf("Informe as notas de cada bimestre:\n");
 
-    for(int i=0;i<bimestres;i++){
+    for (int i = 0; i < bimestres; i++)
+    {
         float nota;
 
-        printf("%i: ", i+1);
+        printf("%i: ", i + 1);
         scanf("%f", &nota);
-        
-        while(!isValid(nota)){
+
+        while (!isValid(nota))
+        {
             printf("Nota invalida! Digite uma nota entre 0 e 10 (inclusives)!\n");
-            printf("%i: ", i+1);
+            printf("%i: ", i + 1);
             scanf("%f", &nota);
         }
 
@@ -33,6 +53,10 @@ int main(){
         media += nota;
     }
 
-        printf("\nResultado: %.2f\n", (media/bimestres));
+    media /= bimestres;
+
+    approved(media);
+    printf("\nResultado: %.2f\n", media);
+
     return 0;
 }
